@@ -1,0 +1,138 @@
+h1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #1f8ed6;
+  font-size: 50px;
+}
+
+p {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #282828;
+  font-weight: 200;
+  margin-bottom: 50px;
+}
+
+img {
+  width: 80%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 210px;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel__slide {
+  margin-right: auto;
+  margin-left: auto;
+  display: none;
+  max-width: 900px;
+  list-style-type: none;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .carousel__slide {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+.carousel__slide--active {
+  display: block;
+}
+
+.carousel-slide__content {
+  margin-bottom: 19px;
+}
+
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  display: block;
+  color: #111;
+  cursor: pointer;
+  opacity: 0.75;
+  transform: translateY(-50%);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+}
+.carousel__arrow:focus {
+  outline: 0;
+}
+.carousel__arrow:hover {
+  opacity: 0.5;
+}
+.carousel__arrow--left {
+  left: 32px;
+}
+.carousel__arrow--right {
+  right: 32px;
+}
+
+.carousel__indicators {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+.carousel__indicators li:nth-of-type(n + 2) {
+  margin-left: 9px;
+}
+
+.carousel__indicator {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background-color: #111;
+  cursor: pointer;
+  opacity: 0.15;
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 1, 1);
+}
+.carousel__indicator:hover {
+  opacity: 0.5;
+}
+.carousel__indicator--active, .carousel__indicator--active:hover {
+  opacity: 0.75;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>NUVO: Development Test</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,400i,700'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+  <h1>Nuvolum</h1>
+  <p>The new illumination of distinguishing assets as generated through innovative media, text, and design.</p>
+<!-- partial:index.partial.html -->
+<div class="carousel-container"></div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js'></script><script  src="./script.js"></script>
+
+<!-- popup modal -->
+<div class="modal">
+  <div class="modal-content">
+      <h1>Hello!</h1>
+  </div>
+</div>
+</body>
+
+<script>
+  const modal = document.querySelector(".modal");
+  const imgClick = document.querySelector(".carousel__slide--active .carousel-slide__content");
+
+  function toggleModal() {
+      modal.classList.toggle("show-modal");
+  }
+
+  function windowOnClick(event) {
+      if (event.target === modal) {
+          toggleModal();
+      }
+  }
+
+  imgClick.addEventListener("click", toggleModal);
+  window.addEventListener("click", windowOnClick);
+</script>
+</html>
